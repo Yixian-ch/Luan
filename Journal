@@ -1,1 +1,48 @@
-https://www.notion.so/Programmation-et-Projet-encadr-10c8e2084b0d80e3a62ed664e64a895a?pvs=4
+- Plan du cours
+    
+    — initier de la gestion de projet
+    — Se familiariser avec le shell UNIX, en apprendre des commandes essentielles
+    — Comprendre la suite logique des traitements et créer sa propre chaîne via un script shell
+    — Créer une synergie avec les connaissances liées à d’autres unités d’enseignement, notam-
+    ment "Gestion Informatique du Multilinguisme" et "Langages réguliers"
+    — Apprendre les bases d’un système de gestion de versions avec GitHub
+    — Créer un site web statique avec HTML et CSS et le déployer via les pages GitHub
+    
+
+# Unix
+
+- Multics (Bell Laboratories,  Geneal Electric C., MIT)
+- Space Travel Thompson - Unix (multiples versions) d’abord en Assembleur (Assembly language) puis en langage C
+- GNU - Linux - GNU/Linux (GNU is Not Unix), Licence GPL
+
+## Le Système de fichier (File system)
+
+- Quelques mots clés par rapport au système de fichier
+    - Aborescence : Racine/Dossier/Parent_Dossier/Fichier
+    - Exemple : /home/Username/…(Desktop, Downloads,…)/filename.format
+        
+        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8da4d6ab-5f12-4a06-bb18-3859a5662bbd/b9d5d4b5-49cd-4da9-8245-d3d13b6be5f8/image.png)
+        
+    - Dossier personnel (~/), dossier courant ou de travail (working directory pwd). ./ désigne le dossier actuel, ../désigne le dossier parent
+    - Chemin absolu : indique la position d’un fichier en partant de la racine. /home/user/Desktop/filename
+    - Chemin relatif : indique la position d’un fichier en partant du dossier courant. ../txt/filename
+    - Caractères de remplacement (jokers ou wildcards) : ? remplace un caractère n’importe lequel, * remplace n’importe quelle suite de caractère. Kleene
+    
+- Fichiers
+    - Nom
+    - Données
+    - Taille
+    - Localisation
+    - Extension : fichiers texte contient uniquement des caractères lisibles (ASCII ou UTF-8) : .txt, .csv, des textes bruts par exemple. Fichiers binaires peut contenir n’importe quelle combinaison d’octets, ils sont non lisibles directement : .png, .ann, .jpeg, fichiers exécutables… Fichiers exécutables sont des programmes à lancer pour effecture une tâche.
+    - Permissions : Lecture (r) ; Ecriture (w) ; Exécutation (x).
+    Ex : dr wxr--r--  user group  4096  Sep 26 10:00  dossier1
+
+## Les Commandes
+
+  Les commandes sont des programmes en d’autres mots des fichiers mais des fichiers binaires exécutables. Ils sont placés par convention dans un dossier où le système sait les trouver (/bin par exemple)
+
+- Forme de commande : nom [-options…] [arguments…]
+    - Options : -o ou --o
+    - Argument : sont des indications ou des chemins vers les fichiers
+    - Les commandes vont d’abord être tokenizés en découpant les différentes parties (nom, options, arguments) puis les interpète en binaire puis cherche les fichiers de commande correspondant puis cherche l’argument puis exécute les commadnes.
+    - quelques commandes : ls, cd, mv, man, help, rm, cp, echo, cat, less, head, tail, mkdir, rmdir, file, pwd, touch, zip, unzip, tar…
